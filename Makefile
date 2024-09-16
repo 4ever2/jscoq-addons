@@ -1,3 +1,10 @@
+# Inputs to this makefile:
+#
+# DUNE_WORKSPACE
+# CONTEXT
+#
+# DUNE_WORKSPACE takes priority over CONTEXT
+
 PKGS = elpi equations extlib simpleio mathcomp mathcomp-extra quickchick software-foundations \
 	   hahn paco snu-sflib promising fcsl-pcm htt pnp coqoban stdpp iris
 
@@ -5,18 +12,12 @@ CONTEXT = jscoq+32bit
 ifeq ($(DUNE_WORKSPACE:%.64=64), 64)
 CONTEXT = jscoq+64bit
 endif
-ifeq ($(DUNE_WORKSPACE:%.wacoq=wacoq), wacoq)
-CONTEXT = wacoq
-endif
 
 # needed when invoking `opam install`
 OPAMSWITCH = $(CONTEXT)
 export OPAMSWITCH
 
 ifeq ($(DUNE_WORKSPACE),)
-ifeq ($(CONTEXT), wacoq)
-DUNE_WORKSPACE = $(PWD)/dune-workspace.wacoq
-endif
 ifeq ($(CONTEXT), jscoq+64bit)
 DUNE_WORKSPACE = $(PWD)/dune-workspace.64
 endif
@@ -37,11 +38,7 @@ COMMIT_FLAGS = -a
 ifneq ($(_V),)
 MSG = [deploy] Prepare for $(_V).
 else
-ifeq ($(CONTEXT), wacoq)
-_V = ${shell wacoq --version}
-else
 _V = ${shell jscoq --version}
-endif
 MSG = ${error MSG= is mandatory}
 endif
 
