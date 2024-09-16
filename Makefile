@@ -45,6 +45,10 @@ endif
 MSG = ${error MSG= is mandatory}
 endif
 
+.PHONY: world-lite
+world-lite:
+	cd mathcomp           && make && make install    # required by QuickChick, FCSL-PCM, HTT
+
 world:
 	cd elpi               && make && make install    # required by mathcomp-extra
 	cd equations          && make
