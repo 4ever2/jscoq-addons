@@ -1,0 +1,14 @@
+{
+    "rootdir": "workdir",
+    "builddir": "coq-pkgs",
+    "projects": {
+        "equations": {
+            "theories": {
+                "prefix": "Equations"
+            },
+            "src": {
+                "prefix": "Equations"
+            }
+        }
+    }
+}

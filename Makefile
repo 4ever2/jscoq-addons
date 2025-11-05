@@ -6,7 +6,7 @@
 # DUNE_WORKSPACE takes priority over CONTEXT
 
 PKGS = coqoban elpi hierarchy-builder mathcomp extlib simpleio \
-	   quickchick
+	   quickchick equations
 
 CONTEXT = jscoq+32bit
 ifeq ($(DUNE_WORKSPACE:%.64=64), 64)
@@ -47,21 +47,14 @@ world-lite:
 	cd mathcomp           && make && make install    # required by QuickChick, FCSL-PCM, HTT
 
 world:
-	cd elpi               && make && make install    # required by mathcomp-extra
+	cd elpi               && make && make install    # required by hierarchy-builder
 	cd equations          && make
 	cd extlib             && make && make install    # required by SimpleIO
 	cd simpleio           && make && make install    # required by QuickChick
-	cd mathcomp           && make && make install    # required by QuickChick, FCSL-PCM, HTT
-	cd mathcomp-extra     && make
+	cd mathcomp           && make && make install    # required by QuickChick
+	cd hierarchy-builder  && make && make install	 # required by mathcomp
 	cd quickchick         && make
-	cd paco               && make
-	cd snu-sflib          && make
-	cd fcsl-pcm           && make && make install    # required by HTT
-	cd htt                && make && make install    # required by PnP
-	cd pnp                && make
 	cd coqoban            && make
-	cd stdpp              && make && make install    # required by Iris
-	cd iris               && make
 ifneq ($(filter software-foundations, $(WITH_PRIVATE)),)
 	cd software-foundations && make
 endif

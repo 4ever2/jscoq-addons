@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/equations",
+    "description": "Equations 1.3.1 for jsCoq",
+    "version": "1.3.1",
+    "files": ["README.md", "coq-pkgs"],
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/addon-equations"
+    },
+    "license": "AGPL-3.0-or-later"
+}
