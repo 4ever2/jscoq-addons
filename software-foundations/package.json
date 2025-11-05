@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/software-foundations",
+    "description": "Software Foundations (Nov 2025) for jsCoq",
+    "version": "6.9.0",
+    "files": ["README.md", "coq-pkgs"],
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/addon-software-foundations"
+    },
+    "license": "AGPL-3.0-or-later"
+}

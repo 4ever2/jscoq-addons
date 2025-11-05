@@ -6,7 +6,7 @@
 # DUNE_WORKSPACE takes priority over CONTEXT
 
 PKGS = coqoban elpi hierarchy-builder mathcomp extlib simpleio \
-	   quickchick equations stdpp iris
+	   quickchick equations stdpp iris software-foundations
 
 CONTEXT = jscoq+32bit
 ifeq ($(DUNE_WORKSPACE:%.64=64), 64)
@@ -44,27 +44,20 @@ endif
 
 .PHONY: world-lite
 world-lite:
-	cd mathcomp           && make && make install    # required by QuickChick, FCSL-PCM, HTT
+	cd mathcomp           	&& make && make install    # required by QuickChick
 
 world:
-	cd elpi               && make && make install    # required by hierarchy-builder
-	cd equations          && make
-	cd extlib             && make && make install    # required by SimpleIO
-	cd simpleio           && make && make install    # required by QuickChick
-	cd mathcomp           && make && make install    # required by QuickChick
-	cd hierarchy-builder  && make && make install	 # required by mathcomp
-	cd quickchick         && make
-	cd coqoban            && make
-	cd stdpp			  && make && make install    # required by iris
-	cd iris			  	  && make && make install
-ifneq ($(filter software-foundations, $(WITH_PRIVATE)),)
+	cd elpi               	&& make && make install    # required by hierarchy-builder
+	cd equations          	&& make
+	cd extlib             	&& make && make install    # required by SimpleIO
+	cd simpleio           	&& make && make install    # required by QuickChick
+	cd mathcomp           	&& make && make install    # required by QuickChick
+	cd hierarchy-builder  	&& make && make install	   # required by mathcomp
+	cd quickchick         	&& make
+	cd coqoban            	&& make
+	cd stdpp			  	&& make && make install    # required by iris
+	cd iris			  	  	&& make && make install
 	cd software-foundations && make
-endif
-
-privates:
-ifneq ($(filter software-foundations, $(WITH_PRIVATE)),)
-	cd software-foundations && make
-endif
 
 .PHONY: %
 

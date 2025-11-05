@@ -1,0 +1,22 @@
+{
+    "rootdir": "workdir",
+    "builddir": "coq-pkgs",
+    "bundle": "software-foundations",
+    "projects": {
+        "sf-LF": {
+            "lf": { "prefix": "LF" }
+        },
+        "sf-PLF": {
+            "plf": { "prefix": "PLF" }
+        },
+        "sf-VFA": {
+            "vfa": { "prefix": "VFA" }
+        },
+        "sf-SLF": {
+            "slf": { "prefix": "SLF" }
+        },
+        "sf-QC": {
+            "slf": { "prefix": "QC" }
+        }
+    }
+}
