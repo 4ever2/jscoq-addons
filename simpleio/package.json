@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/simpleio",
+    "description": "SimpleIO 1.11.0 for jsCoq",
+    "version": "1.11.0",
+    "files": ["README.md", "coq-pkgs"],
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/addon-simpleio"
+    },
+    "license": "AGPL-3.0-or-later"
+}

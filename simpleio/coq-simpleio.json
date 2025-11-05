@@ -1,0 +1,14 @@
+{
+    "rootdir": "workdir",
+    "builddir": "coq-pkgs",
+    "projects": {
+        "simpleio": {
+            "src": {
+                "prefix": "SimpleIO"
+            },
+            "plugin": {
+                "prefix": "SimpleIO"
+            }
+        }
+    }
+}
