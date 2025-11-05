@@ -1,0 +1,76 @@
+diff --git a/apps/coercion/theories/coercion.v b/apps/coercion/theories/coercion.v
+index 6afd7d0..02cafeb 100644
+--- a/apps/coercion/theories/coercion.v
++++ b/apps/coercion/theories/coercion.v
+@@ -1,5 +1,5 @@
+-Declare ML Module "coq-elpi.coercion".
+ From elpi Require Import elpi.
++Declare ML Module "elpi_coercion_plugin:coq-elpi.coercion".
+ 
+ Elpi Db coercion.db lp:{{
+ 
+diff --git a/apps/cs/theories/cs.v b/apps/cs/theories/cs.v
+index dc384a9..564dac5 100644
+--- a/apps/cs/theories/cs.v
++++ b/apps/cs/theories/cs.v
+@@ -1,5 +1,5 @@
+-Declare ML Module "coq-elpi.cs".
+ From elpi Require Import elpi.
++Declare ML Module "elpi_cs_plugin:coq-elpi.cs".
+ 
+ Elpi Db cs.db lp:{{
+ 
+diff --git a/apps/tc/theories/tc.v b/apps/tc/theories/tc.v
+index 51d2cdd..905d018 100644
+--- a/apps/tc/theories/tc.v
++++ b/apps/tc/theories/tc.v
+@@ -1,7 +1,7 @@
+ (* license: GNU Lesser General Public License Version 2.1 or later           *)
+ (* ------------------------------------------------------------------------- *)
+ 
+-Declare ML Module "coq-elpi.tc".
++
+ 
+ From elpi.apps.tc.elpi Extra Dependency "base.elpi" as base.
+ From elpi.apps.tc.elpi Extra Dependency "tc_aux.elpi" as tc_aux.
+@@ -18,6 +18,8 @@ From elpi.apps.tc.elpi Extra Dependency "create_tc_predicate.elpi" as create_tc_
+ From elpi.apps Require Import db.
+ From elpi.apps Require Export add_commands.
+ 
++Declare ML Module "elpi_tc_plugin:coq-elpi.tc".
++
+ Set Warnings "+elpi".
+ 
+ Elpi Command TC.Print_instances.
+diff --git a/apps/tc/theories/wip.v b/apps/tc/theories/wip.v
+index 39ecc7c..a44d690 100644
+--- a/apps/tc/theories/wip.v
++++ b/apps/tc/theories/wip.v
+@@ -1,8 +1,8 @@
+ (* license: GNU Lesser General Public License Version 2.1 or later           *)
+ (* --------------------------------------------------------------------------*)
+ 
+-Declare ML Module "coq-elpi.tc".
+ From elpi Require Import elpi.
++Declare ML Module "elpi_tc_plugin:coq-elpi.tc".
+ 
+ From elpi.apps.tc.elpi Extra Dependency "base.elpi" as base.
+ From elpi.apps.tc.elpi Extra Dependency "modes.elpi" as modes.
+diff --git a/theories/elpi.v.in b/theories/elpi.v.in
+index f8980b4..b29a601 100644
+--- a/theories/elpi.v.in
++++ b/theories/elpi.v.in
+@@ -1,5 +1,12 @@
+ From Coq Require Ltac.
+-Declare ML Module "coq-elpi.elpi".
++Declare ML Module "re:re.re".
++Declare ML Module "trace_ppx_runtime:elpi.elpi.trace.runtime".
++Declare ML Module "elpi_util:elpi.elpi.util".
++Declare ML Module "menhirLib:menhirLib".
++Declare ML Module "elpi_lexer_config:elpi.elpi.lexer_config".
++Declare ML Module "elpi_parser:elpi.elpi.parser".
++Declare ML Module "elpi:elpi.elpi".
++Declare ML Module "elpi_plugin:coq-elpi.elpi".
+ 
+ (* Generate coq-bultins.elpi *)
+ Elpi Document Builtins.

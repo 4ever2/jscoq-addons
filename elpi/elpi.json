@@ -1,0 +1,61 @@
+{
+    "rootdir": "workdir",
+    "builddir": "coq-pkgs",
+    "projects": {
+        "elpi": {
+            "src": {
+                "prefix": "elpi"
+            },
+            "vendor": {
+                "prefix": "elpi"
+            },
+            "theories": {
+                "prefix": "elpi",
+                "dirpaths": [{"logical": "", "rec": false}]
+            },
+            "apps/tc/theories": {
+                "prefix": "elpi.apps.tc"
+            },
+            "apps/tc/src": {
+                "prefix": "elpi.apps.tc"
+            },
+            "apps/tc/elpi": {
+                "prefix": "elpi.apps.tc.elpi"
+            },
+            "apps/NES/theories": {
+                "prefix": "elpi.apps.NES"
+            },
+            "apps/NES/elpi": {
+                "prefix": "elpi.apps.NES.elpi"
+            },
+            "apps/locker/theories": {
+                "prefix": "elpi.apps.locker"
+            },
+            "apps/locker/elpi": {
+                "prefix": "elpi.apps.locker.elpi"
+            },
+            "apps/eltac/theories": {
+                "prefix": "elpi.apps.eltac"
+            },
+            "apps/derive/theories": {
+                "prefix": "elpi.apps.derive",
+                "dirpaths": ["derive"]
+            },
+            "apps/derive/elpi": {
+                "prefix": "elpi.apps.derive.elpi"
+            },
+            "apps/cs/theories": {
+                "prefix": "elpi.apps.cs"
+            },
+            "apps/cs/src": {
+                "prefix": "elpi.apps.cs"
+            },
+            "apps/coercion/theories": {
+                "prefix": "elpi.apps.coercion"
+            },
+            "apps/coercion/src": {
+                "prefix": "elpi.apps.coercion"
+            }
+        }
+    }
+}

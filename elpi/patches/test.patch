@@ -1,0 +1,106 @@
+diff --git a/tests/test_link_order1.v b/tests/test_link_order1.v
+index 5d0078a..7acffa7 100644
+--- a/tests/test_link_order1.v
++++ b/tests/test_link_order1.v
+@@ -24,4 +24,4 @@ Elpi Accumulate lp:{{
+ }}.
+ Elpi Typecheck.
+ Elpi add 10.
+-Elpi Print foo "tests/test_link_order1".
++Elpi Print foo.
+diff --git a/tests/test_link_order2.v b/tests/test_link_order2.v
+index a998a21..fc18a0b 100644
+--- a/tests/test_link_order2.v
++++ b/tests/test_link_order2.v
+@@ -24,5 +24,5 @@ Elpi Accumulate lp:{{
+ }}.
+ Elpi Typecheck.
+ Elpi add 10.
+-Elpi Print foo "tests/test_link_order2".
++Elpi Print foo.
+ 
+diff --git a/tests/test_link_order3.v b/tests/test_link_order3.v
+index 653a8ad..ee05425 100644
+--- a/tests/test_link_order3.v
++++ b/tests/test_link_order3.v
+@@ -24,4 +24,4 @@ Elpi Accumulate lp:{{
+ }}.
+ Elpi Typecheck.
+ Elpi add 10.
+-Elpi Print foo "tests/test_link_order3".
++Elpi Print foo.
+diff --git a/tests/test_link_order4.v b/tests/test_link_order4.v
+index e1e48f4..f26d891 100644
+--- a/tests/test_link_order4.v
++++ b/tests/test_link_order4.v
+@@ -24,5 +24,5 @@ Elpi Accumulate lp:{{
+ }}.
+ Elpi Typecheck.
+ Elpi add 10.
+-Elpi Print foo "tests/test_link_order4".
++Elpi Print foo.
+ 
+diff --git a/tests/test_link_order5.v b/tests/test_link_order5.v
+index c741425..0d0aa38 100644
+--- a/tests/test_link_order5.v
++++ b/tests/test_link_order5.v
+@@ -25,4 +25,4 @@ Elpi Accumulate lp:{{
+ Elpi Typecheck.
+ Elpi add 5.
+ Elpi add 5.
+-Elpi Print foo "tests/test_link_order5".
++Elpi Print foo.
+diff --git a/tests/test_link_order6.v b/tests/test_link_order6.v
+index ad25b09..dde6d6c 100644
+--- a/tests/test_link_order6.v
++++ b/tests/test_link_order6.v
+@@ -25,5 +25,5 @@ Elpi Accumulate lp:{{
+ Elpi Typecheck.
+ Elpi add 5.
+ Elpi add 5.
+-Elpi Print foo "tests/test_link_order6".
++Elpi Print foo.
+ 
+diff --git a/tests/test_link_order7.v b/tests/test_link_order7.v
+index c9e0578..e2871ee 100644
+--- a/tests/test_link_order7.v
++++ b/tests/test_link_order7.v
+@@ -25,4 +25,4 @@ Elpi Accumulate lp:{{
+ Elpi Typecheck.
+ Elpi add 5.
+ Elpi add 5.
+-Elpi Print foo "tests/test_link_order7".
++Elpi Print foo.
+diff --git a/tests/test_link_order8.v b/tests/test_link_order8.v
+index 406e31b..16a433e 100644
+--- a/tests/test_link_order8.v
++++ b/tests/test_link_order8.v
+@@ -25,5 +25,5 @@ Elpi Accumulate lp:{{
+ Elpi Typecheck.
+ Elpi add 5.
+ Elpi add 5.
+-Elpi Print foo "tests/test_link_order8".
++Elpi Print foo.
+ 
+diff --git a/tests/test_link_order9.v b/tests/test_link_order9.v
+index b7d66b9..9d7d7ef 100644
+--- a/tests/test_link_order9.v
++++ b/tests/test_link_order9.v
+@@ -2,5 +2,5 @@ From elpi Require Import elpi.
+ From elpi.tests Require Import test_link_order1.
+ From elpi.tests Require Import test_link_order1.
+ 
+-Elpi Print foo "tests/test_link_order9".
++Elpi Print foo.
+ 
+diff --git a/tests/test_link_order_import3.v b/tests/test_link_order_import3.v
+index 262b93d..c46f99c 100644
+--- a/tests/test_link_order_import3.v
++++ b/tests/test_link_order_import3.v
+@@ -1,3 +1,3 @@
+ From elpi.tests Require Import test_link_order_import2 test_link_order_import1.
+ 
+-Elpi Print bar "tests/test_link_order_import3".
+\ No newline at end of file
++Elpi Print bar.
+\ No newline at end of file

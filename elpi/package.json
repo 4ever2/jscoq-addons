@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/elpi",
+    "description": "coq-elpi 2.2.0 for jsCoq",
+    "version": "2.2.0",
+    "files": ["README.md", "coq-pkgs"],
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/addon-elpi"
+    },
+    "license": "AGPL-3.0-or-later"
+}

@@ -1,0 +1,22 @@
+
+(rule
+ (targets coq-pkgs)
+ (deps
+  (package coq-elpi)
+  workdir/src/elpi_plugin.cma
+  workdir/vendor/elpi_lexer_config.cma
+  workdir/vendor/elpi_parser.cma
+  workdir/vendor/elpi_util.cma
+  workdir/vendor/elpi.cma
+  workdir/vendor/menhirLib.cma
+  workdir/vendor/re.cma
+  workdir/vendor/trace_ppx_runtime.cma
+  )
+ (action
+  (run npx %{env:pkgtool=jscoq} build --workspace %{dep:elpi.json})))
+
+(alias
+ (name all)
+ (deps package.json))
+
+(dirs workdir)
