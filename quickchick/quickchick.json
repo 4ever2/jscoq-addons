@@ -1,0 +1,14 @@
+{
+    "rootdir": "workdir",
+    "builddir": "coq-pkgs",
+    "projects": {
+        "quickchick": {
+            "src": {
+                "prefix": "QuickChick"
+            },
+            "plugin": {
+                "prefix": "QuickChick"
+            }
+        }
+    }
+}

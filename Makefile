@@ -5,7 +5,8 @@
 #
 # DUNE_WORKSPACE takes priority over CONTEXT
 
-PKGS = coqoban elpi hierarchy-builder mathcomp extlib simpleio
+PKGS = coqoban elpi hierarchy-builder mathcomp extlib simpleio \
+	   quickchick
 
 CONTEXT = jscoq+32bit
 ifeq ($(DUNE_WORKSPACE:%.64=64), 64)

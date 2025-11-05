@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/quickchick",
+    "description": "QuickChick 2.1.1 for jsCoq",
+    "version": "2.1.1",
+    "files": ["README.md", "coq-pkgs"],
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/addon-quickchick"
+    },
+    "license": "AGPL-3.0-or-later"
+}

@@ -1,0 +1,13 @@
+diff --git a/src/QuickChick.v.cppo b/src/QuickChick.v.cppo
+index e9e3e81..d819f3b 100644
+--- a/src/QuickChick.v.cppo
++++ b/src/QuickChick.v.cppo
+@@ -2,7 +2,7 @@ Require Import Extraction.
+ Require Import Ltac.
+ 
+ #if COQ_VERSION >= (8, 16, 0)
+-Declare ML Module "coq-quickchick.plugin".
++Declare ML Module "quickchick_plugin:coq-quickchick.plugin".
+ #else
+ Declare ML Module "quickchick_plugin".
+ #endif
