@@ -1,0 +1,43 @@
+{
+    "rootdir": "workdir/mathcomp",
+    "builddir": "coq-pkgs",
+    "bundle": "mathcomp",
+    "projects": {
+        "mathcomp-ssreflect": {
+            "": {
+                "prefix": "mathcomp",
+                "dirpaths": ["ssreflect"]
+            }
+        },
+        "mathcomp-fingroup": {
+            "": {
+                "prefix": "mathcomp",
+                "dirpaths": ["fingroup"]
+            }
+        },
+        "mathcomp-algebra": {
+            "": {
+                "prefix": "mathcomp",
+                "dirpaths": ["algebra"]
+            }
+        },
+        "mathcomp-solvable": {
+            "": {
+                "prefix": "mathcomp",
+                "dirpaths": ["solvable"]
+            }
+        },
+        "mathcomp-field": {
+            "": {
+                "prefix": "mathcomp",
+                "dirpaths": ["field"]
+            }
+        },
+        "mathcomp-character": {
+            "": {
+                "prefix": "mathcomp",
+                "dirpaths": ["character"]
+            }
+        }
+    }
+}

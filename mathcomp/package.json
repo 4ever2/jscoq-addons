@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/mathcomp",
+    "description": "Mathematical Components 2.2.0 for jsCoq",
+    "version": "2.2.0",
+    "files": ["README.md", "coq-pkgs"],
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/addon-mathcomp"
+    },
+    "license": "CeCILL-B"
+}

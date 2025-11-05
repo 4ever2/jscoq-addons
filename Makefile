@@ -5,7 +5,7 @@
 #
 # DUNE_WORKSPACE takes priority over CONTEXT
 
-PKGS = coqoban elpi hierarchy-builder
+PKGS = coqoban elpi hierarchy-builder mathcomp
 
 CONTEXT = jscoq+32bit
 ifeq ($(DUNE_WORKSPACE:%.64=64), 64)
