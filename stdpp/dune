@@ -1,0 +1,14 @@
+
+(rule
+ (targets coq-pkgs)
+ (deps
+  (package coq-stdpp))
+ (action
+  (run npx %{env:pkgtool=jscoq} build workdir/stdpp --top stdpp
+       --package coq-pkgs/stdpp.coq-pkg)))
+
+(alias
+ (name all)
+ (deps package.json))
+
+(dirs workdir)
