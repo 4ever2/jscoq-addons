@@ -1,0 +1,27 @@
+{
+    "rootdir": "workdir",
+    "builddir": "coq-pkgs",
+    "bundle": "iris",
+    "projects": {
+        "iris": {
+            "iris": {
+                "prefix": "iris"
+            }
+        },
+        "iris-heap-lang": {
+            "iris_heap_lang": {
+                "prefix": "iris.heap_lang"
+            }
+        },
+        "iris-unstable": {
+            "iris_unstable": {
+                "prefix": "iris.unstable"
+            }
+        },
+        "iris-deprecated": {
+            "iris_deprecated": {
+                "prefix": "iris.deprecated"
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/iris",
+    "description": "Iris for jsCoq",
+    "version": "0.14.1",
+    "files": ["README.md", "coq-pkgs"],    
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/addon-iris"
+    },
+    "license": "AGPL-3.0-or-later"
+}

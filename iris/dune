@@ -1,0 +1,17 @@
+
+(rule
+ (targets coq-pkgs)
+ (deps
+  (package coq-iris)
+  (package coq-iris-heap-lang)
+  (package coq-iris-unstable)
+  (package coq-iris-deprecated))
+ (action
+  (run npx %{env:pkgtool=jscoq} build --workspace %{dep:jscoq-iris.json}
+                   --load ../stdpp/coq-pkgs/stdpp.coq-pkg)))
+
+(alias
+ (name all)
+ (deps package.json))
+
+(dirs workdir)
