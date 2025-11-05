@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/coqoban",
+    "description": "Coqoban -- a fun interlude for jsCoq",
+    "version": "8.13.0",
+    "files": ["README.md", "coq-pkgs"],    
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/addon-coqoban"
+    },
+    "license": "AGPL-3.0-or-later"
+}
