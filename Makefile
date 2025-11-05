@@ -5,8 +5,7 @@
 #
 # DUNE_WORKSPACE takes priority over CONTEXT
 
-PKGS = elpi equations extlib simpleio mathcomp mathcomp-extra quickchick software-foundations \
-	   hahn paco snu-sflib promising fcsl-pcm htt pnp coqoban stdpp iris
+PKGS = 
 
 CONTEXT = jscoq+32bit
 ifeq ($(DUNE_WORKSPACE:%.64=64), 64)
