@@ -1,0 +1,11 @@
+{
+    "name": "@jscoq/extlib",
+    "description": "ExtLib for jsCoq",
+    "version": "0.13.0",
+    "files": ["README.md", "coq-pkgs"],    
+    "repository": {
+        "type": "git",
+        "url": "github:jscoq/addon-extlib"
+    },
+    "license": "AGPL-3.0-or-later"
+}
