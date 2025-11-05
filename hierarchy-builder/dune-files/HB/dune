@@ -1,0 +1,7 @@
+(coq.theory
+ (name HB)
+ (package coq-hierarchy-builder)
+ (plugins re elpi.trace.runtime elpi)
+ (flags -w -elpi.accumulate-syntax))
+
+(include_subdirs qualified)

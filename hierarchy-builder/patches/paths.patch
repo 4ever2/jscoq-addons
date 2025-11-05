@@ -1,0 +1,511 @@
+diff --git a/HB/common/utils.elpi b/HB/common/utils.elpi
+index ae4216b..649a30f 100644
+--- a/HB/common/utils.elpi
++++ b/HB/common/utils.elpi
+@@ -3,7 +3,7 @@
+ 
+ 
+ % This file contains some HB specific utilities
+-accumulate HB/common/utils-synterp.
++accumulate hierarchy-builder/workdir/HB/common/utils-synterp.
+ 
+ shorten coq.{ term->gref, subst-fun, safe-dest-app, mk-app, mk-eta, subst-prod }.
+ 
+diff --git a/HB/structures.v b/HB/structures.v
+index 9657cfc..1475613 100644
+--- a/HB/structures.v
++++ b/HB/structures.v
+@@ -297,13 +297,13 @@ Elpi Export HB.locate.
+ 
+ #[arguments(raw)] Elpi Command HB.about.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/about.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/about.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -331,14 +331,14 @@ Elpi Export HB.about.
+ 
+ #[arguments(raw)] Elpi Command HB.howto.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/about.elpi".
+-Elpi Accumulate File "HB/howto.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/about.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/howto.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -373,12 +373,12 @@ Elpi Export HB.howto.
+ 
+ #[arguments(raw)] Elpi Command HB.status.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/status.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/status.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -402,13 +402,13 @@ tred file.dot | xdot -
+ 
+ #[arguments(raw)] Elpi Command HB.graph.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/graph.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/graph.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -451,25 +451,25 @@ HB.mixin Record MixinName T of Factory1 T & … & FactoryN T := {
+ 
+ #[arguments(raw)] Elpi Command HB.mixin.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/common/synthesis.elpi".
+-Elpi Accumulate File "HB/common/phant-abbreviation.elpi".
+-Elpi Accumulate File "HB/instance.elpi".
+-Elpi Accumulate File "HB/context.elpi".
+-Elpi Accumulate File "HB/export.elpi".
+-Elpi Accumulate File "HB/factory.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/synthesis.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/phant-abbreviation.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/instance.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/context.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/export.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/factory.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+ main [A] :- with-attributes (with-logging (factory.declare-mixin A)).
+ 
+ }}.
+-#[synterp] Elpi Accumulate File "HB/common/utils-synterp.elpi".
++#[synterp] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils-synterp.elpi".
+ #[synterp] Elpi Accumulate Db export.db.
+ #[synterp] Elpi Accumulate lp:{{
+ 
+@@ -533,14 +533,14 @@ Elpi Export HB.mixin.
+ 
+ Elpi Tactic HB.pack_for.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/common/synthesis.elpi".
+-Elpi Accumulate File "HB/pack.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/synthesis.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/pack.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -556,14 +556,14 @@ Elpi Export HB.pack_for.
+ 
+ Elpi Tactic HB.pack.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/common/synthesis.elpi".
+-Elpi Accumulate File "HB/pack.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/synthesis.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/pack.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -632,19 +632,19 @@ HB.structure Definition StructureName params :=
+ 
+ #[arguments(raw)] Elpi Command HB.structure.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/common/synthesis.elpi".
+-Elpi Accumulate File "HB/common/phant-abbreviation.elpi".
+-Elpi Accumulate File "HB/export.elpi".
+-Elpi Accumulate File "HB/instance.elpi".
+-Elpi Accumulate File "HB/context.elpi".
+-Elpi Accumulate File "HB/factory.elpi".
+-Elpi Accumulate File "HB/structure.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/synthesis.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/phant-abbreviation.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/export.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/instance.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/context.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/factory.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/structure.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -656,7 +656,7 @@ main [const-decl N (some B) Arity] :- std.do! [
+ ].
+ 
+ }}.
+-#[synterp] Elpi Accumulate File "HB/common/utils-synterp.elpi".
++#[synterp] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils-synterp.elpi".
+ #[synterp] Elpi Accumulate Db export.db.
+ #[synterp] Elpi Accumulate lp:{{
+ 
+@@ -715,18 +715,18 @@ Elpi Export HB.structure.
+ 
+ #[arguments(raw)] Elpi Command HB.saturate.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/common/synthesis.elpi".
+-Elpi Accumulate File "HB/common/phant-abbreviation.elpi".
+-Elpi Accumulate File "HB/export.elpi".
+-Elpi Accumulate File "HB/instance.elpi".
+-Elpi Accumulate File "HB/context.elpi".
+-Elpi Accumulate File "HB/factory.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/synthesis.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/phant-abbreviation.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/export.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/instance.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/context.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/factory.elpi".
+ Elpi Accumulate lp:{{
+ main [] :- !, with-attributes (with-logging (instance.saturate-instances _)).
+ main [str "Type"] :- !, with-attributes (with-logging (instance.saturate-instances (cs-sort _))).
+@@ -765,15 +765,15 @@ HB.instance Definition N Params := Factory.Build Params T …
+ 
+ #[arguments(raw)] Elpi Command HB.instance.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/common/synthesis.elpi".
+-Elpi Accumulate File "HB/context.elpi".
+-Elpi Accumulate File "HB/instance.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/synthesis.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/context.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/instance.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -807,25 +807,25 @@ Elpi Export HB.instance.
+ 
+ #[arguments(raw)] Elpi Command HB.factory.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/common/synthesis.elpi".
+-Elpi Accumulate File "HB/common/phant-abbreviation.elpi".
+-Elpi Accumulate File "HB/instance.elpi".
+-Elpi Accumulate File "HB/context.elpi".
+-Elpi Accumulate File "HB/export.elpi".
+-Elpi Accumulate File "HB/factory.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/synthesis.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/phant-abbreviation.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/instance.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/context.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/export.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/factory.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+ main [A] :- with-attributes (with-logging (factory.declare A)).
+ 
+ }}.
+-#[synterp] Elpi Accumulate File "HB/common/utils-synterp.elpi".
++#[synterp] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils-synterp.elpi".
+ #[synterp] Elpi Accumulate Db export.db.
+ #[synterp] Elpi Accumulate lp:{{
+ 
+@@ -890,26 +890,26 @@ HB.end.
+ 
+ #[arguments(raw)] Elpi Command HB.builders.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/common/synthesis.elpi".
+-Elpi Accumulate File "HB/common/phant-abbreviation.elpi".
+-Elpi Accumulate File "HB/instance.elpi".
+-Elpi Accumulate File "HB/context.elpi".
+-Elpi Accumulate File "HB/export.elpi".
+-Elpi Accumulate File "HB/factory.elpi".
+-Elpi Accumulate File "HB/builders.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/synthesis.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/phant-abbreviation.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/instance.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/context.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/export.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/factory.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/builders.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+ main [ctx-decl C] :- with-attributes (with-logging (builders.begin C)).
+ 
+ }}.
+-#[synterp] Elpi Accumulate File "HB/common/utils-synterp.elpi".
++#[synterp] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils-synterp.elpi".
+ #[synterp] Elpi Accumulate lp:{{
+ 
+ shorten coq.env.{ begin-module, end-module, begin-section }.
+@@ -931,24 +931,24 @@ Elpi Export HB.builders.
+ 
+ #[arguments(raw)] Elpi Command HB.end.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/common/synthesis.elpi".
+-Elpi Accumulate File "HB/instance.elpi".
+-Elpi Accumulate File "HB/context.elpi".
+-Elpi Accumulate File "HB/export.elpi".
+-Elpi Accumulate File "HB/builders.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/synthesis.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/instance.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/context.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/export.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/builders.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+ main [] :- with-attributes (with-logging builders.end).
+ 
+ }}.
+-#[synterp] Elpi Accumulate File "HB/common/utils-synterp.elpi".
++#[synterp] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils-synterp.elpi".
+ #[synterp] Elpi Accumulate Db export.db.
+ #[synterp] Elpi Accumulate lp:{{
+ 
+@@ -1005,13 +1005,13 @@ Export Algebra.Exports.
+ 
+ #[arguments(raw)] Elpi Command HB.export.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/export.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/export.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -1019,7 +1019,7 @@ main [str M] :- !, with-attributes (with-logging (export.any M)).
+ main _ :- coq.error "Usage: HB.export M.".
+ 
+ }}.
+-#[synterp] Elpi Accumulate File "HB/common/utils-synterp.elpi".
++#[synterp] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils-synterp.elpi".
+ #[synterp] Elpi Accumulate Db export.db.
+ #[synterp] Elpi Accumulate lp:{{
+ 
+@@ -1051,13 +1051,13 @@ Elpi Export HB.export.
+ 
+ #[arguments(raw)] Elpi Command HB.reexport.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/export.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/export.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -1066,7 +1066,7 @@ main [str M] :- !, with-attributes (with-logging (export.reexport-all-modules-an
+ main _ :- coq.error "Usage: HB.reexport.".
+ 
+ }}.
+-#[synterp] Elpi Accumulate File "HB/common/utils-synterp.elpi".
++#[synterp] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils-synterp.elpi".
+ #[synterp] Elpi Accumulate Db export.db.
+ #[synterp] Elpi Accumulate lp:{{
+ 
+@@ -1134,18 +1134,18 @@ HB.instance Definition _ : Ml ... T := ml.
+ 
+ #[arguments(raw)] Elpi Command HB.declare.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
+-Elpi Accumulate File "HB/common/synthesis.elpi".
+-Elpi Accumulate File "HB/common/phant-abbreviation.elpi".
+-Elpi Accumulate File "HB/export.elpi".
+-Elpi Accumulate File "HB/instance.elpi".
+-Elpi Accumulate File "HB/context.elpi".
+-Elpi Accumulate File "HB/factory.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/synthesis.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/phant-abbreviation.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/export.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/instance.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/context.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/factory.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
+@@ -1170,12 +1170,12 @@ Elpi Export HB.declare.
+ 
+ #[arguments(raw)] Elpi Command HB.check.
+ Elpi Accumulate Db hb.db.
+-Elpi Accumulate File "HB/common/stdpp.elpi".
+-Elpi Accumulate File "HB/common/database.elpi".
+-#[skip="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_all.elpi".
+-#[only="8.1[56].*"] Elpi Accumulate File "HB/common/compat_acc_clauses_816.elpi".
+-Elpi Accumulate File "HB/common/utils.elpi".
+-Elpi Accumulate File "HB/common/log.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/stdpp.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/database.elpi".
++#[skip="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_all.elpi".
++#[only="8.1[56].*"] Elpi Accumulate File "hierarchy-builder/workdir/HB/common/compat_acc_clauses_816.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/utils.elpi".
++Elpi Accumulate File "hierarchy-builder/workdir/HB/common/log.elpi".
+ Elpi Accumulate lp:{{
+ 
+ :name "start"
