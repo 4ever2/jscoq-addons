@@ -1,7 +1,7 @@
 {
     "name": "@jscoq/iris",
     "description": "Iris for jsCoq",
-    "version": "0.14.1",
+    "version": "4.4.0",
     "files": ["README.md", "coq-pkgs"],    
     "repository": {
         "type": "git",
