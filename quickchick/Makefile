@@ -1,5 +1,7 @@
-REPO = https://github.com/QuickChick/QuickChick.git
-TAG = v2.1.1
+#REPO = https://github.com/QuickChick/QuickChick.git # full QC (plugin doesn't work except for derive)
+#TAG = v2.1.1
+REPO = https://github.com/4ever2/QuickChick.git # Minimized JSCoq compatible version (everything works, but missing some features)
+TAG = qc-in-coq
 WORKDIR = workdir
 
 # Git boilerplate
