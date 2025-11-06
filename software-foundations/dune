@@ -9,6 +9,10 @@
   (package coq-sf-qc)
   (:json jscoq-software-foundations.json))
  (action
-  (run npx %{env:pkgtool=jscoq} build %{json})))
+  (run npx %{env:pkgtool=jscoq} build %{json}
+                  --load ../mathcomp/coq-pkgs/mathcomp-ssreflect.coq-pkg
+                  --load ../extlib/coq-pkgs/extlib.coq-pkg
+                  --load ../simpleio/coq-pkgs/simpleio.coq-pkg
+                  --load ../quickchick/coq-pkgs/quickchick.coq-pkg)))
 
 (dirs workdir)

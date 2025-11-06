@@ -16,7 +16,7 @@
             "slf": { "prefix": "SLF" }
         },
         "sf-QC": {
-            "slf": { "prefix": "QC" }
+            "qc": { "prefix": "QC" }
         }
     }
 }

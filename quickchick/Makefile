@@ -30,3 +30,6 @@ prepare: $(WORKDIR)
 	@echo '- Installing dependencies -'
 	sed -i.bak '/"coq[-"]/d' workdir/coq-quickchick.opam  # don't install Coq and libs
 	unset DUNE_WORKSPACE && opam install -y --deps-only $(WORKDIR)/coq-quickchick.opam
+
+install:
+	dune install coq-quickchick

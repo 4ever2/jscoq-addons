@@ -53,7 +53,7 @@ world:
 	cd simpleio           	&& make && make install    # required by QuickChick
 	cd mathcomp           	&& make && make install    # required by QuickChick
 	cd hierarchy-builder  	&& make && make install	   # required by mathcomp
-	cd quickchick         	&& make
+	cd quickchick         	&& make && make install	   # required by software-foundations
 	cd coqoban            	&& make
 	cd stdpp			  	&& make && make install    # required by iris
 	cd iris			  	  	&& make && make install

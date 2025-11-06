@@ -4,7 +4,7 @@ VFA_URL = https://softwarefoundations.cis.upenn.edu/vfa-current/vfa.tgz
 QC_URL = https://softwarefoundations.cis.upenn.edu/qc-current/qc.tgz
 SLF_URL = https://softwarefoundations.cis.upenn.edu/slf-current/slf.tgz
 WORKDIR = workdir
-SUBDIRS = common lf plf vfa slf
+SUBDIRS = lf plf vfa slf qc
 
 .PHONY: all get clean
 
@@ -32,4 +32,4 @@ $(WORKDIR):
 	find $(WORKDIR)/ -name "*.v" -type f -print0 | xargs -0 sed -i 's/Stdlib/Coq/g'
 
 clean:
-	rn -r $(WORKDIR)
+	rm -r $(WORKDIR)

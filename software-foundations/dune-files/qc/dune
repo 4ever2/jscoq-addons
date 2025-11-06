@@ -1,4 +1,5 @@
 (coq.theory
  (name QC)
  (package coq-sf-qc)
+ (plugins re elpi.trace.runtime elpi)
  (modules :standard))
